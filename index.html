@@ -10,93 +10,11 @@
 
 <body>
   <header>
-    <h1>Can the Last of Us Zombies be real?</h1>
+    <h1 id="typewriter"></h1>
+    <dotlottie-player src="https://lottie.host/aafe783a-a412-45c3-aac5-fbec11389ad6/EPmLJi7JT4.json"
+      background="transparent" speed="1" style="width: 200px; height: 200px" loop autoplay></dotlottie-player>
   </header>
   <h1>What is the last of us?</h1>
-
-  <div class="wrapper">
-    <div class="zombie">
-      <div class="zombie__head">
-        <div class="zombie__brain"></div>
-        <div class="zombie__cheeks"></div>
-        <div class="zombie__chin"></div>
-        <div class="zombie__eyes">
-          <div class="eye left">
-            <div class="eyebrow"></div>
-          </div>
-          <div class="eye right">
-            <div class="eyebrow"></div>
-          </div>
-        </div>
-        <div class="zombie__nose"></div>
-        <div class="zombie__mouth">
-          <div class="tooth">
-            <div class="tooth__top"></div>
-            <div class="tooth__bottom"></div>
-          </div>
-        </div>
-      </div>
-      <div class="zombie__body">
-        <div class="zombie__chest">
-          <div class="zombie__arms">
-            <div class="arm left">
-              <div class="arm__bone"></div>
-              <div class="arm__sleeve"></div>
-            </div>
-            <div class="arm right">
-              <div class="arm__details">
-                <div class="arm__biceps"></div>
-                <div class="arm__forearm"></div>
-                <div class="hands">
-                  <div class="fingers">
-                    <div class="finger thumb"></div>
-                    <div class="finger middle"></div>
-                    <div class="finger index"></div>
-                    <div class="finger ring"></div>
-                    <div class="finger pinky"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="arm__sleeve"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="ground">
-      <div class="ground__hole"></div>
-      <div class="ground__rocks">
-        <div class="rock"></div>
-        <div class="rock"></div>
-        <div class="rock"></div>
-        <div class="rock"></div>
-        <div class="rock"></div>
-        <div class="rock"></div>
-        <div class="rock"></div>
-        <div class="rock"></div>
-        <div class="rock"></div>
-        <div class="rock"></div>
-        <div class="rock"></div>
-        <div class="rock"></div>
-        <div class="rock"></div>
-        <div class="rock"></div>
-        <div class="rock"></div>
-      </div>
-      <div class="tomb">
-        <div class="tomb__info">
-          <h1 class="headers">RIP</h1>
-          <h2 class="headers">Last of Us</h2>
-          <h5 class="headers">Noah, Albert, Sean, and Mahdi</h5>
-        </div>
-      </div>
-      <div class="brains-comic-box">
-        <h1 class="brains__text">Click!</h1>
-      </div>
-    </div>
-  </div>
-
-  <dotlottie-player src="https://lottie.host/aafe783a-a412-45c3-aac5-fbec11389ad6/EPmLJi7JT4.json"
-    background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>
 
   <p>Post-apocalyptic world where a fungal virus has infected the globe</p>
   <h1>What are the zombies and why are they connected to bio</h1>
@@ -131,7 +49,49 @@
     is, so if an outbreak did happen the military would most definitely handle
     the problem one way or another
   </p>
+
+  <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+  <script>
+    function sleep(ms) {
+      return new Promise((resolve) => setTimeout(resolve, ms));
+    }
+
+    const phrases = ["Can the Last of Us Zombies be real?"];
+
+    const el = document.getElementById("typewriter");
+
+    let sleepTime = 100;
+
+    let curPhraseIndex = 0;
+
+    const writeLoop = async () => {
+      while (true) {
+        let curWord = phrases[curPhraseIndex];
+
+        for (let i = 0; i < curWord.length; i++) {
+          el.innerText = curWord.substring(0, i + 1);
+          await sleep(sleepTime);
+        }
+
+        await sleep(sleepTime * 10);
+
+        for (let i = curWord.length; i > 0; i--) {
+          el.innerText = curWord.substring(0, i - 1);
+          await sleep(sleepTime);
+        }
+
+        await sleep(sleepTime * 5);
+
+        if (curPhraseIndex === phrases.length - 1) {
+          curPhraseIndex = 0;
+        } else {
+          curPhraseIndex++;
+        }
+      }
+    };
+
+    writeLoop();
+  </script>
 </body>
-<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
 
 </html>
