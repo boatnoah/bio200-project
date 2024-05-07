@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Can the Last of Us Zombies be real?</title>
+  <title>Can the Last Of Us Zombies be real?</title>
   <link href="css/style.css" rel="stylesheet" />
 </head>
 
@@ -12,17 +12,20 @@
   <header>
     <h1 id="typewriter"></h1>
     <dotlottie-player src="https://lottie.host/aafe783a-a412-45c3-aac5-fbec11389ad6/EPmLJi7JT4.json"
-      background="transparent" speed="1" style="width: 200px; height: 200px" loop autoplay></dotlottie-player>
+      background="transparent" speed="1" style="width: 200px; height: 200px" autoplay></dotlottie-player>
   </header>
-  <h1>What is the last of us?</h1>
-
+  <h1>What is the Last Of Us?</h1>
+  <hr class="solid" />
   <p>Post-apocalyptic world where a fungal virus has infected the globe</p>
-  <h1>What are the zombies and why are they connected to bio</h1>
+  <h1>What are the zombies and how is it connected to bio?</h1>
+  <hr class="solid" />
   <p>
     The fungal virus converts humans into “zombies” that are hostile and
     quickly bring the downfall of humanity
   </p>
+
   <h1>Science</h1>
+  <hr class="solid" />
   <p>
     The fungus in the game is most similar and inspired by
     Cordyceps(Ophiocordyceps unilateralis) In nature the spores of the
@@ -34,6 +37,7 @@
   </p>
   <h1>Humans Effect</h1>
   <h2>So why does it not affect us?</h2>
+  <hr class="solid" />
   <ul>
     <li>
       Our effective immune system and our body temperature stop the fungi from
@@ -43,12 +47,22 @@
   </ul>
 
   <h1>Mutates for human</h1>
+  <hr class="solid" />
   <p>
     Hypothetically if it did mutate to humans it still would not be as bad as
     in the Last For Us, because it would not affect how aggressive the host
     is, so if an outbreak did happen the military would most definitely handle
     the problem one way or another
   </p>
+  <hr class="solid" />
+  <footer>
+    <p>
+      Made by Noah - Add me on
+      <span>
+        <a href="https://www.linkedin.com/in/noah-kim-cs/">Linkedin</a>
+      </span>
+    </p>
+  </footer>
 
   <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
   <script>
@@ -57,36 +71,14 @@
     }
 
     const phrases = ["Can the Last of Us Zombies be real?"];
-
     const el = document.getElementById("typewriter");
-
-    let sleepTime = 100;
-
-    let curPhraseIndex = 0;
+    let sleepTime = 50;
 
     const writeLoop = async () => {
-      while (true) {
-        let curWord = phrases[curPhraseIndex];
-
-        for (let i = 0; i < curWord.length; i++) {
-          el.innerText = curWord.substring(0, i + 1);
-          await sleep(sleepTime);
-        }
-
-        await sleep(sleepTime * 10);
-
-        for (let i = curWord.length; i > 0; i--) {
-          el.innerText = curWord.substring(0, i - 1);
-          await sleep(sleepTime);
-        }
-
-        await sleep(sleepTime * 5);
-
-        if (curPhraseIndex === phrases.length - 1) {
-          curPhraseIndex = 0;
-        } else {
-          curPhraseIndex++;
-        }
+      let curWord = phrases[0];
+      for (let i = 0; i < curWord.length; i++) {
+        el.innerText = curWord.substring(0, i + 1);
+        await sleep(sleepTime);
       }
     };
 

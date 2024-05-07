@@ -15,7 +15,32 @@ body {
   background: #231f1a;
   color: #cbb39c;
   padding: 0;
-  margin: 40px;
+  margin: 0 auto;
   max-width: 650px;
   line-height: 1.6;
+}
+
+.solid {
+  border-top: 1px solid #626554;
+}
+
+a {
+  color: #626554;
+}
+
+@media (max-width: 767px) {
+
+  /* Styles for mobile devices */
+  body {
+    margin: 10px;
+    /* Reduced margin for smaller screens */
+    font-size: 14px;
+    /* Reduced font size for better readability */
+    margin: 20px;
+    /* Reduced margin for mobile */
+    max-width: 100%;
+    /* Allow full width on mobile */
+    line-height: 1.4;
+    /* Reduced line-height for better readability on smaller screens */
+  }
 }
