@@ -28,6 +28,18 @@ a {
   color: #626554;
 }
 
+img {
+  height: 20vh;
+}
+
+.flex {
+  display: flex;
+}
+
+.science {
+  align-self: self-end;
+}
+
 @media (max-width: 767px) {
 
   /* Styles for mobile devices */
