@@ -32,12 +32,12 @@ img {
   height: 20vh;
 }
 
-.flex {
+.heading {
   display: flex;
 }
 
-.science {
-  align-self: self-end;
+img {
+  align-self: center;
 }
 
 @media (max-width: 767px) {
