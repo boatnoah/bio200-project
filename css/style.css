@@ -44,6 +44,10 @@ img {
   display: flex;
 }
 
+#typewriter {
+  align-self: center;
+}
+
 @media (max-width: 767px) {
 
   /* Styles for mobile devices */
