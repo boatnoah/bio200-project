@@ -40,6 +40,10 @@ img {
   align-self: center;
 }
 
+.flex {
+  display: flex;
+}
+
 @media (max-width: 767px) {
 
   /* Styles for mobile devices */
