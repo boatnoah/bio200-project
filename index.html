@@ -6,59 +6,123 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Can the Last Of Us Zombies be real?</title>
   <link href="css/style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
-  <header class="heading">
+  <header class="heading" data-aos="fade-down">
     <h1 id="typewriter"></h1>
     <dotlottie-player src="https://lottie.host/aafe783a-a412-45c3-aac5-fbec11389ad6/EPmLJi7JT4.json"
       background="transparent" speed="1" style="width: 200px; height: 200px" autoplay></dotlottie-player>
     <img src="zombie.png" />
   </header>
-  <h1>What is the Last Of Us?</h1>
-  <hr class="solid" />
-  <p>Post-apocalyptic world where a fungal virus has infected the globe</p>
-  <h1>What are the zombies and how is it connected to bio?</h1>
-  <hr class="solid" />
-  <p>
-    The fungal virus converts humans into “zombies” that are hostile and
-    quickly bring the downfall of humanity
-  </p>
 
-  <h1>Science</h1>
+  <section data-aos="slide-left">
+    <h1>What is the Last Of Us?</h1>
+    <hr class="solid" />
+    <p>Post-apocalyptic world where a fungal virus has infected the globe</p>
+  </section>
 
-  <hr class="solid" />
-  <div class="flex">
+  <section data-aos="slide-left">
+    <h1>What are the zombies and how is it connected to bio?</h1>
+    <hr class="solid" />
     <p>
-      The fungus in the game is most similar and inspired by
-      Cordyceps(Ophiocordyceps unilateralis) In nature the spores of the
-      cordyceps take control of their host’s mind and motor functions, usually
-      insects Once infected by the fungus it will drain all nutrients in the
-      host and fill it with spores. It then manipulates its movements to seek
-      higher ground where the spores leak out of the host in hope of spreading
-      the spores to other insects.
+      The fungal virus converts humans into "zombies" that are hostile and
+      quickly bring the downfall of humanity
     </p>
-    <img src="cordyceps.png" />
-  </div>
-  <h1>Humans Effect</h1>
-  <h2>So why does it not affect us?</h2>
-  <hr class="solid" />
-  <ul>
-    <li>
-      Our effective immune system and our body temperature stop the fungi from
-      growing
-    </li>
-    <li>Cordyceps have evolved to specifically target insects like ants</li>
-  </ul>
+  </section>
 
-  <h1>Mutates for human</h1>
-  <hr class="solid" />
-  <p>
-    Hypothetically if it did mutate to humans it still would not be as bad as
-    in the Last For Us, because it would not affect how aggressive the host
-    is, so if an outbreak did happen the military would most definitely handle
-    the problem one way or another
-  </p>
+  <section data-aos="slide-right">
+    <h1>Science</h1>
+    <hr class="solid" />
+    <div class="flex">
+      <ul>
+        <li>
+          The fungus in the game is most similar to and inspired by Cordyceps
+          (Ophiocordyceps unilateralis).
+        </li>
+        <li>
+          In nature the spores of the cordyceps take control of their host's
+          mind and motor functions, usually insects.
+        </li>
+        <li>
+          Once infected by the fungus it will drain all nutrients in the host
+          and fill it with spores. It then manipulates its movements to seek
+          higher ground where the spores leak out of the host, hoping to
+          spread the spores to other insects.
+        </li>
+        <li>
+          The process in which cordyceps hijack neural and motor functions is
+          by secreting neuromodulatory agents around the central and
+          peripheral nervous system. Along with this process, it also contains
+          bacteria that stop the chemical signaling ants use to communicate
+          with one another
+        </li>
+        <li>
+          Infected insects usually develop biting behavior which is a likely
+          inspiration for the Last of Us zombies, but cordyceps is not known
+          to increase host hostility.
+        </li>
+      </ul>
+      <img src="cordyceps.png" />
+    </div>
+  </section>
+
+  <section data-aos="slide-left">
+    <h1>Humans Effect</h1>
+    <h2>So why does it not affect us?</h2>
+    <hr class="solid" />
+    <ul>
+      <li>
+        Our effective immune system and our body temperature stop the fungi
+        from growing.
+      </li>
+      <li>
+        Cordyceps have evolved to specifically target insects like ants.
+      </li>
+      <li>
+        Keep in mind that our immune system is not impervious to fungal
+        infection, for example many humans get athletes' feet or ringworms. It
+        is just the case that cordyceps is not adapted for humans.
+      </li>
+    </ul>
+  </section>
+
+  <section data-aos="slide-left">
+    <h1>Hypothetical Scenario</h1>
+    <hr class="solid" />
+    <ul>
+      <li>
+        A cordyceps fungus evolved to infect humans would force the host's
+        body to produce massive amounts of infectious spores.
+      </li>
+      <li>
+        Infected people would be driven to high altitudes by the fungus,
+        helping to spread spores through the air over vast areas.
+      </li>
+      <li>
+        Any physical trauma or ruptures to infected hosts would release
+        concentrated spore loads into the environment.
+      </li>
+      <li>
+        Incineration may be the only way to fully destroy fungal bodies acting
+        as spore sacs within human hosts.
+      </li>
+      <li>
+        With an airborne, persistent infectivity, such an outbreak could
+        rapidly become an uncontrolled pandemic.
+      </li>
+      <li>
+        Infected people would be nothing like the hostile zombies in The Last
+        of Us.
+      </li>
+      <li>
+        While this scenario has speculative elements, it is based on the
+        real-world characteristics of the cordyceps fungus.
+      </li>
+    </ul>
+  </section>
+
   <hr class="solid" />
   <footer>
     <p>
@@ -70,6 +134,7 @@
   </footer>
 
   <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     function sleep(ms) {
       return new Promise((resolve) => setTimeout(resolve, ms));
@@ -88,6 +153,7 @@
     };
 
     writeLoop();
+    AOS.init();
   </script>
 </body>
 
